@@ -3,7 +3,9 @@
 
 ## 📖 Descripción
 
-Proyecto de análisis de datos utilizando SQL sobre una base de datos que representa la actividad de una tienda de alquiler de películas llamada **“Videoclub”**.
+Proyecto de análisis de datos utilizando SQL sobre una base de datos que representa la actividad de una tienda de alquiler de películas.
+
+El objetivo del proyecto es aplicar SQL avanzado sobre una base de datos relacional siguiendo una consigna práctica estructurada, que permite extraer insights de negocio e implementar de forma aplicada conceptos clave de modelado y análisis de datos.
 
 La base de datos contiene **15 tablas relacionales** con información sobre:
 
@@ -13,8 +15,6 @@ La base de datos contiene **15 tablas relacionales** con información sobre:
 - Staff
 - Alquileres
 - Películas (género, idioma, actores, etc.)
-
-El objetivo del proyecto es realizar consultas SQL para extraer insights relevantes a partir de una consigna específica y analizar el comportamiento comercial del negocio.
 
 ---
 
@@ -82,8 +82,7 @@ La base refleja la actividad de **2 sucursales** durante:
 
 ## 🔄 Próximos Pasos
 
-- Análisis de frecuencia por día de la semana
-- Análisis por franja horaria
+- Análisis de frecuencia por día de la semana y franja horaria
 - Segmentación de clientes
 - Cálculo de rentabilidad por género
 - Promedio de consumo mensual por cliente
