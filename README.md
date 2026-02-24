@@ -1,4 +1,3 @@
-# SQL_queries
 # 🎬 SQL Data Analysis – Videoclub Database
 
 ## 📖 Descripción
