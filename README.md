@@ -95,6 +95,6 @@ La base refleja la actividad de **2 sucursales** durante:
 Data Analyst en formación con enfoque en análisis SQL y exploración de datos relacionales.
 
 🔗 GitHub: https://github.com/rgoantunez  
-🔗 Repositorio del proyecto: https://github.com/rgoantunez/SQL_queries
+🔗 Repositorio del proyecto: https://github.com/rgoantunez/Advanced_SQL_queries
 
 ---
