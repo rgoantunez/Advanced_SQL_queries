@@ -2,7 +2,7 @@
 
 ## 📖 Descripción
 
-Proyecto de análisis de datos utilizando SQL sobre una base de datos que representa la actividad de una tienda de alquiler de películas.
+Proyecto de análisis de datos utilizando SQL sobre la conocida base de datos 'Sakila' que representa la actividad de una tienda de alquiler de películas.
 
 El objetivo del proyecto es aplicar SQL avanzado sobre una base de datos relacional siguiendo una consigna práctica estructurada, que permite extraer insights de negocio e implementar de forma aplicada conceptos clave de modelado y análisis de datos.
 
