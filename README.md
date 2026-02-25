@@ -2,9 +2,9 @@
 
 ## 📖 Descripción
 
-Proyecto de análisis de datos utilizando SQL sobre la conocida base de datos 'Sakila' que representa la actividad de una tienda de alquiler de películas.
+Este proyecto transforma datos crudos de una base relacional en insights accionables para la toma de decisiones estratégicas en un entorno de retail/alquiler.
 
-El objetivo del proyecto es aplicar SQL avanzado sobre una base de datos relacional siguiendo una consigna práctica estructurada, que permite extraer insights de negocio e implementar de forma aplicada conceptos clave de modelado y análisis de datos.
+El objetivo es aplicar SQL avanzado sobre la conocida base de datos 'Sakila' siguiendo una consigna práctica estructurada, que permite extraer insights de negocio e implementar de forma aplicada conceptos clave de modelado y análisis de datos.
 
 La base de datos contiene **15 tablas relacionales** con información sobre:
 
@@ -43,30 +43,34 @@ Contiene consultas y conclusiones obtenidas a partir del análisis.
 
 ## 📊 Resultados y Conclusiones
 
-La base refleja la actividad de **2 sucursales** durante:
+El análisis se centró en tres pilares fundamentales: **Operaciones, Gestión de Inventario y Comportamiento del Cliente.** 
 
-- Mayo – Agosto 2005
-- Febrero 2006
+La base de datos refleja la actividad de 2 sucursales durante los meses de Mayo a Agosto de 2005 y un registro adicional en Febrero de 2006.
 
-### 🔎 Principales insights:
+### 🔎 1. Eficiencia Operativa y Ventas
+* **Volumen de Negocio:** Se procesaron un total de **16,044 alquileres**, con un ticket promedio de **2.98 (u.m.)**.
+* **Análisis de Estacionalidad:** Se identificó una tendencia creciente entre mayo y julio, alcanzando un pico máximo de demanda el **31 de julio de 2005 con 679 alquileres**.
+* **Identificación de Anomalías:** El mes de febrero 2006 muestra una actividad inusualmente baja (182 alquileres), lo que sugiere un posible sesgo en la recolección de datos o un periodo de cierre parcial que amerita investigación adicional.
 
-- 2 sucursales con 1 empleado cada una
-- 599 clientes registrados
-- 1.000 películas disponibles para alquiler
-- 16 géneros distintos
-- 200 actores/actrices
-- 16.044 alquileres registrados
+### 📈 2. Gestión de Inventario y Producto
+* **Diversificación del Catálogo:** El inventario cuenta con **1,000 películas** distribuidas en **16 géneros**, ofreciendo una oferta balanceada para distintos segmentos de audiencia.
+* **Rotación de Stock:** El tiempo promedio de alquiler real es de **4.98 días**. Comparar este dato con la duración permitida (`rental_duration`) permite identificar oportunidades para optimizar las políticas de recargos por mora y mejorar la disponibilidad de títulos populares.
 
-### 📈 Comportamiento del negocio
+### 👥 3. Inteligencia de Clientes
+* **Fidelización:** Se identificó un segmento de **"Power Users"** (clientes con más de 7 películas distintas alquiladas). Esto permite al negocio diseñar programas de lealtad dirigidos a los 599 clientes registrados.
+* **Geografía e Hipótesis:** La concentración de actividad en julio sugiere una correlación con temporadas invernales (hemisferio sur), donde el consumo de entretenimiento hogareño tiende a aumentar.
 
-- Promedio de alquiler: **4,98 días**
-- Precio promedio de alquiler: **2,98 (unidad monetaria)**
-- Tendencia creciente de alquileres entre Mayo y Julio 2005
-- Pico máximo: **31 de julio de 2005 con 679 alquileres**
-- Mes con mayor actividad: **Julio 2005 (6.709 alquileres)**
-- Mes con menor actividad: **Febrero 2006 (182 alquileres)**
+---
 
-📌 Hipótesis: La estacionalidad sugiere que los datos podrían corresponder al hemisferio sur, donde julio es invierno (temporada alta) y febrero verano.
+## 🧠 Habilidades Técnicas Demostradas
+
+En este proyecto se implementaron soluciones técnicas avanzadas para asegurar la robustez y escalabilidad del análisis:
+
+- **Subconsultas Dinámicas:** Utilizadas para comparar registros contra métricas globales (ej. identificar películas con duración superior al promedio) evitando el uso de valores estáticos (*hardcoding*).
+- **CTEs (Common Table Expressions):** Implementación de tablas temporales para segmentar cálculos complejos, facilitando la lectura y el mantenimiento del código SQL.
+- **Uniones Avanzadas (Joins):** Uso estratégico de `LEFT JOIN` para detectar ausencias de datos (ej. actores sin participación activa) e `INNER JOIN` para la integridad referencial en cruces multifactoriales.
+- **Limpieza de Datos:** Aplicación de funciones de cadena como `TRIM` / `STRIP` y manejo de nulos con `IS NULL` para garantizar la precisión de los reportes.
+- **Funciones de Agregación:** Uso de `COUNT(DISTINCT ...)` para métricas de unicidad y funciones temporales para el cálculo de intervalos reales de tiempo.
 
 ---
 
@@ -81,10 +85,8 @@ La base refleja la actividad de **2 sucursales** durante:
 
 ## 🔄 Próximos Pasos
 
-- Análisis de frecuencia por día de la semana y franja horaria
 - Segmentación de clientes
-- Cálculo de rentabilidad por género
-- Promedio de consumo mensual por cliente
+- Cálculo de rentabilidad por género y rango etario
 - Visualización de resultados con herramientas BI
 
 ---
