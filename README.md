@@ -53,7 +53,7 @@ La base de datos refleja la actividad de 2 sucursales durante los meses de Mayo 
 
 ## 🌟 Consulta Destacada: Análisis de Impacto Temporal
 
-A modo de demostración del manejo de **subconsultas dinámicas** y **relaciones multi-tabla**, resalto esta consulta que identifica actores cuyas peliculas marcaron un impacto en alquileres posteriores a un hito específico: el primer alquiler de la película *'Spartacus Cheaper'*.
+A modo demostrativo del manejo de **subconsultas dinámicas** y **relaciones multi-tabla**, resalto esta consulta que identifica actores protagonistas de peliculas alquiladas con posterioridad a un hito específico: el primer alquiler de la película *'Spartacus Cheaper'*.
 
 <details>
 <summary><b>Ver consulta SQL</b></summary>
