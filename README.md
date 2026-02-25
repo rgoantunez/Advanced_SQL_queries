@@ -25,7 +25,7 @@ Pasos realizados:
 3. Ejecución del script SQL para generar estructura y cargar datos
 4. Exploración del esquema relacional para comprender relaciones entre tablas
 
-![Diagrama Entidad Relación](img/diagrama_videoclub.png)
+![Diagrama Entidad Relación](img/Diagrama_Videoclub.png)
 
 ### 📁 scripts/
 Contiene el archivo `Scripts_Videoclub.sql` en el cual desarrollo 64 consultas siguiendo una consigna preestablecida. A partir de estas consultas y del análisis de los datos llego a las conclusiones y resultados que expongo a continuación.
@@ -50,6 +50,38 @@ La base de datos refleja la actividad de 2 sucursales durante los meses de Mayo 
 ### 👥 3. Inteligencia de Clientes
 * **Fidelización:** Se identificó un segmento de **"Power Users"** (clientes con más de 7 películas distintas alquiladas). Esto permite al negocio diseñar programas de lealtad dirigidos a los 599 clientes registrados.
 * **Geografía e Hipótesis:** La concentración de actividad en julio sugiere una correlación con temporadas invernales (hemisferio sur), donde el consumo de entretenimiento hogareño tiende a aumentar.
+
+## 🌟 Consulta Destacada: Análisis de Impacto Temporal
+
+A modo de demostración del manejo de **subconsultas dinámicas** y **relaciones multi-tabla**, resalto esta consulta que identifica actores cuyas peliculas marcaron un impacto en alquileres posteriores a un hito específico: el primer alquiler de la película *'Spartacus Cheaper'*.
+
+<details>
+<summary><b>Ver consulta SQL</b></summary>
+
+```sql
+-- Identifica actores que participaron en películas alquiladas 
+-- después del debut de 'Spartacus Cheaper' en el sistema.
+
+SELECT DISTINCT 
+    a.first_name AS NOMBRE, 
+    a.last_name AS APELLIDO
+FROM actor a
+INNER JOIN film_actor fa ON a.actor_id = fa.actor_id
+INNER JOIN film f ON fa.film_id = f.film_id
+INNER JOIN inventory i ON f.film_id = i.film_id
+INNER JOIN rental r ON i.inventory_id = r.inventory_id
+WHERE r.rental_date > (
+    -- Subconsulta dinámica para encontrar el hito temporal (mínima fecha)
+    SELECT MIN(r2.rental_date)
+    FROM rental r2
+    INNER JOIN inventory i2 ON r2.inventory_id = i2.inventory_id
+    INNER JOIN film f2 ON i2.film_id = f2.film_id
+    WHERE f2.title = 'SPARTACUS CHEAPER'
+)
+ORDER BY APELLIDO ASC;
+```
+
+</details>
 
 ---
 
