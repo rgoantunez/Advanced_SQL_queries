@@ -6,15 +6,6 @@ Este proyecto transforma datos crudos de una base relacional en insights acciona
 
 El objetivo es aplicar SQL avanzado sobre la conocida base de datos 'Sakila' siguiendo una consigna práctica estructurada, que permite extraer insights de negocio e implementar de forma aplicada conceptos clave de modelado y análisis de datos.
 
-La base de datos contiene **15 tablas relacionales** con información sobre:
-
-- Clientes
-- Pagos
-- Inventario
-- Staff
-- Alquileres
-- Películas (género, idioma, actores, etc.)
-
 ---
 
 ## 🗂 Estructura del Proyecto
@@ -22,9 +13,7 @@ La base de datos contiene **15 tablas relacionales** con información sobre:
 ### 📁 data/
 Contiene el archivo `BBDD_Proyecto.sql`, que incluye la creación de tablas y carga de datos.
 
-### 📁 scripts/
 Proceso de instalación y consultas SQL ejecutadas mediante **DBeaver** utilizando:
-
 - Conexión local
 - Puerto 5432
 - Usuario: postgres
@@ -36,8 +25,10 @@ Pasos realizados:
 3. Ejecución del script SQL para generar estructura y cargar datos
 4. Exploración del esquema relacional para comprender relaciones entre tablas
 
-### 📁 results/
-Contiene consultas y conclusiones obtenidas a partir del análisis.
+![Diagrama Entidad Relación](img/Diagrama_Videoclub.png)
+
+### 📁 scripts/
+Contiene el archivo `Scripts_Videoclub.sql` en el cual desarrollo 64 consultas siguiendo una consigna preestablecida. A partir de estas consultas y del análisis de los datos llego a las conclusiones y resultados que expongo a continuación.
 
 ---
 
