@@ -25,10 +25,12 @@ Pasos realizados:
 3. Ejecución del script SQL para generar estructura y cargar datos
 4. Exploración del esquema relacional para comprender relaciones entre tablas
 
+Visualizo el **Diagrama Entidad-Relación:**
+
 ![Diagrama Entidad Relación](img/Diagrama_Videoclub.png)
 
 ### 📁 scripts/
-Contiene el archivo `Scripts_Videoclub.sql` en el cual desarrollo 64 consultas siguiendo una consigna preestablecida. A partir de estas consultas y del análisis de los datos llego a las conclusiones y resultados que expongo a continuación.
+Contiene el archivo `Scripts_Videoclub.sql` en el cual desarrollo 64 consultas siguiendo una consigna preestablecida. A partir de estas consultas y del análisis de los datos obtengo los resultados y conclusiones que expongo a continuación.
 
 ---
 
