@@ -119,7 +119,7 @@ En este proyecto se implementaron soluciones técnicas avanzadas para asegurar l
 ## 👨‍💻 Autor
 
 **Rodrigo Antúnez**  
-Data Analyst en formación con enfoque en análisis SQL y exploración de datos relacionales.
+Economist & Data Analyst en formación con enfoque en análisis SQL y exploración de datos relacionales.
 
 🔗 GitHub: https://github.com/rgoantunez  
 🔗 Repositorio del proyecto: https://github.com/rgoantunez/Advanced_SQL_queries
